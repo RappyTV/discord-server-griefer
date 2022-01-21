@@ -1,13 +1,13 @@
 {
-    "token": "Nzc5Njc1MTA4ODE3MjQwMDc0.X7j_Bw.YsaQaGsy5U50gx5qNzHcBGLiEg4",
-    "prefix": "g/",
+    "token": "",
+    "prefix": "",
     "botAccount": true,
     "presence": {
         "allActivated": true,
-        "presence": "online",
+        "presence": "idle",
         "useStatus": true,
-        "statusType": "COMPETETING",
-        "status": "with Servers.",
+        "statusType": "PLAYING",
+        "status": "around with Servers",
         "useUrl": false,
         "url": ""
     },
