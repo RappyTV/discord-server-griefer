@@ -14,6 +14,8 @@
     "messages": {
         "renameRoles": "",
         "spamEveryone": "",
-        "renameChannels": ""
+        "renameChannels": "",
+        "kickReason": "",
+        "banReason": ""
     }
 }
