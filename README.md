@@ -10,6 +10,7 @@
 
 ## Step 1: Installation
 Just simply install this repository by typing `git clone https://github.com/RappyTV/discord-server-griefer.git` into your git bash or just download this repository as a zip file.
+(You have to have (Node.js)[https://nodejs.org] installed!)
 
 ## Step 2: Configuration
 If you have downloaded and extracted all the files you should look for a file named `config.json` and in this file it should look like this:
@@ -62,8 +63,15 @@ Valid `statusType`-Values:
 - STREAMING
 
 ## Step 3: Start the client
+> Windows
 Just open the `start.bat` File and the client starts!
 If there are any errors, they will be displayed in the console...
+
+> Linux
+You have to execute `node index.js` in a terminal to run the client.
+
+> MacOS
+You have to execute `node index.js` in a terminal to run the client.
 
 ## Step 4: Have fun!
 Here is a list of all commands and their functions:
