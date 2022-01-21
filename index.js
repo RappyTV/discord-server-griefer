@@ -1,5 +1,9 @@
 const cfg = require('./config.json');
 const fs = require('fs');
+
+// TODO: Write all output messages
+//! Write all output messages
+
 if(cfg.botAccount == true) {
     const { Client, Intents } = require('discord.js');
     const bot = new Client({
