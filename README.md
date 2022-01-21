@@ -16,6 +16,8 @@ Just simply install this repository by typing `git clone https://github.com/Rapp
 **!!! IMPORTANT !!!** <br>
 You have to have [Node.js](https://nodejs.org) installed!
 
+Then just execute the command `npm i` to install all needed dependencies.
+
 ## Step 2: Configuration
 If you have downloaded and extracted all the files you should look for a file named `config.json` and in this file it should look like this:
 ```json
