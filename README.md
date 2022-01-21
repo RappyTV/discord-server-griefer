@@ -4,6 +4,8 @@
 
 ### All you need is a _bot_ **OR** _client_ token
 
+<font size="1">This is a beta, please let me know if you have any issues [here](https://github.com/RappyTV/discord-server-griefer/issues)!</font>
+
 ---
 
 <br>

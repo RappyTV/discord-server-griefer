@@ -45,7 +45,11 @@ if(cfg.botAccount == true) {
     if(!cfg.token || typeof cfg.token !== 'string') {
         return console.log(`${`[ERROR]`.red} ${`An invalid token was provided!`.yellow}`);
     }
-    bot.login(cfg.token);
+    try {
+        bot.login(cfg.token);
+    } catch(err) {
+        return console.log(`${`[ERROR]`.red} ${`Please provide a valid token!`.yellow}`);
+    }
 } else {
     const { Client } = require('discord.js-selfbot');
     const client = new Client({
@@ -68,5 +72,9 @@ if(cfg.botAccount == true) {
     if(!cfg.token || typeof cfg.token !== 'string') {
         return console.log(`${`[ERROR]`.red} ${`An invalid token was provided!`.yellow}`);
     }
-    client.login(cfg.token);
+    try {
+        client.login(cfg.token);
+    } catch(err) {
+        return console.log(`${`[ERROR]`.red} ${`Please provide a valid token!`.yellow}`);
+    }
 }
