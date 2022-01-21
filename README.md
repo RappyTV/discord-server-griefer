@@ -64,13 +64,16 @@ Valid `statusType`-Values:
 
 ## Step 3: Start the client
 > Windows
+
 Just open the `start.bat` File and the client starts!
 If there are any errors, they will be displayed in the console...
 
 > Linux
+
 You have to execute `node index.js` in a terminal to run the client.
 
 > MacOS
+
 You have to execute `node index.js` in a terminal to run the client.
 
 ## Step 4: Have fun!
