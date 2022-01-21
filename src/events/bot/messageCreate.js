@@ -1,4 +1,5 @@
 const { Message } = require("discord.js");
+require('colors');
 
 let bot;
 
@@ -16,6 +17,7 @@ module.exports = {
     trigger: async (message) => {
         if(message.author.bot) return;
         if(!message.content.startsWith(bot.cfg.prefix)) return;
+        if(bot.cfg.myID != '' || bot.cfg.myID != message.author.id) return;
         let parts = message.content.split(/ +/);
 
         let dummyparts = message.content.slice(bot.cfg.prefix.length).trim().split(/ +/);
@@ -26,10 +28,10 @@ module.exports = {
             try {
                 comm.execute(bot, message, parts);
             } catch(err) {
-                console.error(new Error(err));
+                console.log(`${`[ERROR]`.red} ${`${err}`.yellow}`);
             }
         } else {
-            console.error(new Error(`The command ${parts[0]} is non-existent!`))
+            console.log(`${`[ERROR]`.red} ${`The command you tried to execute is non-existent!`.yellow}`);
         }
     }
 }

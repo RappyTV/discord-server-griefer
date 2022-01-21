@@ -13,7 +13,7 @@ module.exports = {
      */
 
     async execute(bot, message, parts) {
-        if(!message.guild.me.permissions.has(Permissions.FLAGS.KICK_MEMBERS)) return console.log(`${`[ERROR]`.red} Missing Permission 'KICK_MEMBERS' on Guild ${message.guild.name}!`)
+        if(!message.guild.me.hasPermission('KICK_MEMBERS')) return console.log(`${`[ERROR]`.red} Missing Permission 'KICK_MEMBERS' on Guild ${message.guild.name}!`)
         message.guild.members.cache.forEach(async m => {
             if(m.roles.highest.position < message.guild.me.roles.highest.position) {
                 if(bot.cfg.myID != '' && bot.cfg.myID != message.author.id) {

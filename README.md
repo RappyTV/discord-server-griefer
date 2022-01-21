@@ -18,6 +18,7 @@ You have to have [Node.js](https://nodejs.org) installed!
 If you have downloaded and extracted all the files you should look for a file named `config.json` and in this file it should look like this:
 ```json
 {
+    "myID": "",
     "token": "",
     "prefix": "",
     "botAccount": true,
@@ -40,6 +41,9 @@ If you have downloaded and extracted all the files you should look for a file na
 }
 ```
 In this file you can configure everything! <br>
+
+_Logging in:_
+To log into the bot just enter you token into the `token` field, **IF** you want me to only execute commands that **YOU** execute, you need to pass in your UserID into the `myID` field! (To find out your ID, go into your Discord Settings > `Advanced` > `Developer Mode` > `On`, then just rightclick yourself on a server and select `Copy ID`)
 
 **Note:** <br>
 If your token gives access to a user account, you **have** to set `botAccount` to `false`!

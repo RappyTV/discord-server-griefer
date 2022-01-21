@@ -1,5 +1,6 @@
 const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
+require('colors');
 
 module.exports = {
 
@@ -17,7 +18,7 @@ module.exports = {
 
             for(const file of dir) {
                 const event = require(`../events/bot/${file}`);
-                if(!event.description || !event.trigger) return console.log(``)
+                if(!event.description || !event.trigger) return console.log(`${`[ERROR]`.red} ${`The ${event}-Event has no valid desctiption, or trigger!`.yellow}`);
 
                 client.events.set(file.slice(0, -3), event);
 
@@ -29,7 +30,7 @@ module.exports = {
 
             for(const file of dir) {
                 const event = require(`../events/client/${file}`);
-                if(!event.description || !event.trigger) return console.log(``)
+                if(!event.description || !event.trigger) return console.log(`${`[ERROR]`.red} ${`The ${event}-Event has no valid desctiption, or trigger!`.yellow}`);
 
                 event.init(client);
                 client.events.set(file.slice(0, -3), event);

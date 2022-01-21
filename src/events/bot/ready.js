@@ -1,4 +1,5 @@
 const { Client } = require("discord.js");
+require('colors');
 
 let bot;
 
@@ -9,8 +10,6 @@ module.exports = {
     },
 
     trigger: async () => {
-        console.log(`Logged in`);
-
         if(bot.cfg.presence.allActivated) {
             let presence;
             let statusType;
@@ -46,6 +45,7 @@ module.exports = {
                 }],
                 status: presence
             })
+            console.log(`${`[CLIENT]`.blue} ${`Successfully logged in!`.yellow}`);
         }
     }
 }

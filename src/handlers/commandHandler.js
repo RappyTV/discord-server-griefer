@@ -1,5 +1,6 @@
 const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
+require('colors');
 
 module.exports = {
 
@@ -17,7 +18,7 @@ module.exports = {
 
             for(const file of dir) {
                 const cmd = require(`../commands/bot/${file}`);
-                if(!cmd.name || !cmd.description || !cmd.execute) return console.log(``)
+                if(!cmd.name || !cmd.description || !cmd.execute) return console.log(`${`[ERROR]`.red} ${`The ${cmd}-Command has no valid name, description or execute function!`.yellow}`);
 
                 client.commands.set(cmd.name, cmd);
             }
@@ -26,7 +27,7 @@ module.exports = {
 
             for(const file of dir) {
                 const cmd = require(`../commands/client/${file}`);
-                if(!cmd.name || !cmd.description || !cmd.execute) return console.log(``)
+                if(!cmd.name || !cmd.description || !cmd.execute) return console.log(`${`[ERROR]`.red} ${`The ${cmd}-Command has no valid name, description or execute function!`.yellow}`);
 
                 client.commands.set(cmd.name, cmd);
             }

@@ -1,5 +1,6 @@
 const { Client, Message, Permissions } = require("discord.js");
 require('colors');
+require('colors');
 
 module.exports = {
     name: 'spameveryone',
@@ -14,7 +15,7 @@ module.exports = {
 
     async execute(bot, message, parts) {
         message.guild.channels.cache.forEach(ch => {
-            if(ch.type == 'GUILD_TEXT') return;
+            if(ch.type == 'text') return;
             if(ch.permissionsFor(message.guild.me).has(Permissions.FLAGS.SEND_MESSAGES)) {
                 console.log(`${`[INFO]`.cyan} ${`Started spamming @Everyone Pings!`.yellow}`)
                 let b = true;

