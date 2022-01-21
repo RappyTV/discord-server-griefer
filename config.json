@@ -4,7 +4,7 @@
     "botAccount": true,
     "presence": {
         "allActivated": true,
-        "presence": "idle",
+        "presence": "online",
         "useStatus": true,
         "statusType": "PLAYING",
         "status": "around with Servers",
