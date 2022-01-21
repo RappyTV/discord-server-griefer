@@ -61,7 +61,11 @@ Valid `statusType`-Values:
 - WATCHING
 - STREAMING
 
-## Step 3: Have fun!
+## Step 3: Start the client
+Just open the `start.bat` File and the client starts!
+If there are any errors, they will be displayed in the console...
+
+## Step 4: Have fun!
 Here is a list of all commands and their functions:
 
 - nuke > Deletes all channels and creates new ones. The name will be the value of `messages.renameChannels`
