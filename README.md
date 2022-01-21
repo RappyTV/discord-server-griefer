@@ -11,7 +11,7 @@
 ## Step 1: Installation
 Just simply install this repository by typing `git clone https://github.com/RappyTV/discord-server-griefer.git` into your git bash or just download this repository as a zip file.
 
-**IMPORTANT** <br>
+**!!! IMPORTANT !!!** <br>
 You have to have [Node.js](https://nodejs.org) installed!
 
 ## Step 2: Configuration
