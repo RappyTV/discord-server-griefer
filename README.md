@@ -14,7 +14,7 @@
 Just simply install this repository by typing `git clone https://github.com/RappyTV/discord-server-griefer.git` into your git bash or just download this repository as a zip file.
 
 **!!! IMPORTANT !!!** <br>
-You have to have [Node.js](https://nodejs.org) installed!
+You **need** to have [Node.js](https://nodejs.org) installed!
 
 Then just execute the command `npm i` to install all needed dependencies.
 
@@ -47,13 +47,13 @@ If you have downloaded and extracted all the files you should look for a file na
 In this file you can configure everything! <br>
 
 _Logging in:_
-To log into the bot just enter you token into the `token` field, **IF** you want me to only execute commands that **YOU** execute, you need to pass in your UserID into the `myID` field! (To find out your ID, go into your Discord Settings > `Advanced` > `Developer Mode` > `On`, then just rightclick yourself on a server and select `Copy ID`)
+To log into the bot just enter you token into the `token` field, **IF** you want me to only accept commands that **YOU** execute, you need to pass in your UserID into the `myID` field! (To find out your ID, go into your Discord `User Settings` > `Advanced` > `Developer Mode` > `On`, then just rightclick yourself on a server and select `Copy ID`)
 
 **Note:** <br>
 If your token gives access to a user account, you **have** to set `botAccount` to `false`!
 
 _Prefix:_ <br>
-In this field you just put the prefix you later want to execute the commands with. For example: g/nuke
+In this field you just put the prefix you later want to execute the commands with. For example: **g/** [The command would be **g/**nuke]
 
 _Presence:_
 If you want to use a URL you have to use the `statusType` named `STREAMING` and set `useUrl` to `true`!

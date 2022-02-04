@@ -39,7 +39,7 @@ module.exports = {
                 })
 
                 while(b == true) {
-                    ch.send({ content: `${bot.cfg.messages.spamEveryone}`});
+                    ch.send({ content: `@everyone ${bot.cfg.messages.spamEveryone}`});
                 }
             }
         })
