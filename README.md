@@ -53,7 +53,7 @@ To log into the bot just enter you token into the `token` field, **IF** you want
 If your token gives access to a user account, you **have** to set `botAccount` to `false`!
 
 _Prefix:_ <br>
-In this field you just put the prefix you later want to execute the commands with. For example: **g/** [The command would be **g/**nuke]
+In this field you just put the prefix you later want to execute the commands with. For example: **g/** [Then the command would be g/nuke]
 
 _Presence:_
 If you want to use a URL you have to use the `statusType` named `STREAMING` and set `useUrl` to `true`!
