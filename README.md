@@ -92,8 +92,8 @@ Here is a list of all commands and their functions:
 - nuke > Deletes all channels and creates new ones. The name will be the value of `messages.renameChannels`
 - rr > Renames all roles to the value of `messages.renameRoles`
 - spameveryone > Spams @everyone Pings in all possible Channels (Message is just the value of `messages.spamEveryone`)
-- kickall > Kicks all members with the reason `messages.kickReason`
-- banall > Bans all members with the reason `messages.banAll`
+- kickall > Kicks all members with the reason you provide in `messages.kickReason`
+- banall > Bans all members with the reason you provide in `messages.banAll`
 
 ---
 
